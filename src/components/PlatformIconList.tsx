@@ -8,7 +8,7 @@ import {
   FaAndroid,
 } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
-import { SiNintendo } from "react-icons/si";
+import { SiNintendo, SiSega, SiAtari } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
 import { Platform } from "../hooks/useGames";
 import { IconType } from "react-icons";
@@ -28,6 +28,8 @@ const PlatformIconList = ({ platforms }: Props) => {
     android: FaAndroid,
     nintendo: SiNintendo,
     web: BsGlobe,
+    sega: SiSega,
+    atari: SiAtari,
   };
   return (
     <HStack marginY={1}>
