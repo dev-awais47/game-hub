@@ -15,18 +15,19 @@ export interface Game {
   rating_top: number;
 }
 
-const useGames = (gameQuery: GameQuery) =>
-  useData<Game>(
+const useGames = (gameQuery: GameQuery) => {
+  return useData<Game>(
     "/games",
     {
       params: {
         genres: gameQuery.genre?.id,
         platforms: gameQuery.platform?.id,
         ordering: gameQuery.sortOrder,
-        search: gameQuery.searchText
+        search: gameQuery.searchText,
       },
     },
     [gameQuery]
   );
+};
 
 export default useGames;
